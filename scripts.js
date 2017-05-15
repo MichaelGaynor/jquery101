@@ -20,10 +20,21 @@ $(document).ready(function(){
   // body = $("body");
 
   $("button").click(function(){
-    
-  })
+    // console.log(this);
+    // console.log($(this).attr("toDo"));
+    var whatToDo = $(this).attr("toDo");
+    if (whatToDo == "hide"){
+      $("#thing").hide();
+    }else if (whatToDo == "show"){
+      $("#thing").show();
+      // Same thing as:
+      // document.getElementById("thing").style.display = "none"
+    }else if (whatToDo = "toggle"){
+      $("#thing").toggle();
+    }
+  });
 
-})
+});
 
 // Wait until ABSOLUTELY EVERYTHING has loaded (images, videos, etc)
 // $(window).on("load", function(){
