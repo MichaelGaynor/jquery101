@@ -29,8 +29,15 @@ $(document).ready(function(){
       $("#thing").show();
       // Same thing as:
       // document.getElementById("thing").style.display = "none"
-    }else if (whatToDo = "toggle"){
+    }else if (whatToDo == "toggle"){
       $("#thing").toggle();
+    }else if (whatToDo == "html"){
+      console.log($("#thing").html());
+      $("#thing").html("<strong>I am new innerHTML</strong>");
+    }else if (whatToDo == "text"){
+      $("#thing").text("<strong>I am new innerHTML.</strong>");
+    }else if (whatToDo == "prepend"){
+      $("#thing").prepend("Firstly...")
     }
   });
 
