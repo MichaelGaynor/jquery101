@@ -38,6 +38,45 @@ $(document).ready(function(){
       $("#thing").text("<strong>I am new innerHTML.</strong>");
     }else if (whatToDo == "prepend"){
       $("#thing").prepend("Firstly...")
+    }else if (whatToDo == "append"){
+      $("#thing").append("...and therefore")
+    }else if (whatToDo == "css"){
+      $("#thing").css({
+        "color": "lime",
+        "font-size": "80px",
+        "background-color": "viridian",
+        "border-radius": "50%"
+      })
+    }else if (whatToDo == "class"){
+      $("#thing").addClass("partyMan")
+    }else if (whatToDo == "removeClass"){
+      $("#thing").removeClass("partyMan")
+    }else if (whatToDo == "fadeOut"){
+      $("#thing").fadeOut();
+    }else if (whatToDo == "fadeIn"){
+      $("#thing").fadeIn();
+    }else if (whatToDo == "fadeToggleDelay"){
+      $("#thing").delay(1000).fadeToggle();
+    }else if (whatToDo == "slideToggle"){
+      $("#thing").slideToggle();
+    }else if (whatToDo == "stop"){
+      $("#thing").stop();
+    }else if (whatToDo == "goAway"){
+      $("#thing").animate({
+        "margin-left": "-1500",
+      },2000);
+    }else if (whatToDo == "comeBack"){
+      $("#thing").animate({
+        "margin-left": "0",
+      },2000);
+    }else if (whatToDo == "goAhead"){
+      $("#thing").animate({
+        "margin-left": "1500",
+      },2000);
+    }else if (whatToDo == "loop"){
+      $("button").each(()=>{
+        $(this).html("I am part of the loop")
+      });
     }
   });
 
